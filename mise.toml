@@ -1,5 +1,6 @@
 [tools]
 swift = "6.2"
+hk = { version = "latest", postinstall = "hk install" }
 
 # Dev Server
 [tasks.dev]
@@ -14,19 +15,12 @@ swift run score dev --port "$usage_port"
 
 # Build
 [tasks.build]
-description = "Build the Swift package"
+description = "Build the site for production"
 usage = '''
-arg "<config>" default="debug" help="Build configuration" {
-  choices "debug" "release"
-}
-flag "-w --werror" help="Treat warnings as errors" default="true"
 flag "-v --verbose" help="Show verbose build output" default="false"
 '''
 run = '''
-echo "Building (config=${usage_config?}) werror=${usage_werror?}"
-swift build -c "${usage_config?}" \
-  ${usage_werror:+-Xswiftc -warnings-as-errors} \
-  ${usage_verbose:+-v}
+swift run ${usage_verbose:+-v} score build
 '''
 
 # Format & Lint
@@ -43,16 +37,10 @@ else
 fi
 '''
 
-# Continuous Integration
-[tasks.ci]
-description = "Run all CI gates"
-depends = [
-  "format --check",
-  "build",
-]
-run = "echo CI completed successfully"
-
 # Clean
 [tasks.clean]
 description = "Remove build artifacts"
-run = "swift package clean"
+run = '''
+swift package clean
+rm -rf .score
+'''
