@@ -7,11 +7,11 @@ struct HomePage: Page {
         Stack {
             // Hero with entrance animation
             Section {
-                Heading(.one) { "Score Minimal Example" }
+                Heading(.one) { Localized("home.title") }
                     .font(.sans, size: 48, weight: .bold, color: .text, align: .center)
                     .animate(.fadeIn, duration: 0.6)
 
-                Paragraph { "A minimal app demonstrating pages, components, routes, and data." }
+                Paragraph { Localized("home.subtitle") }
                     .font(.mono, size: 14, color: .muted, align: .center)
                     .animate(.fadeIn, duration: 0.6, delay: 0.2)
             }
@@ -20,7 +20,7 @@ struct HomePage: Page {
 
             // Interactive counter component
             Section {
-                Heading(.two) { "Reactive Counter" }
+                Heading(.two) { Localized("home.counter.title") }
                     .font(.sans, size: 24, weight: .semibold, color: .text)
                     .animateOnScroll(.slideUp)
 
@@ -31,14 +31,14 @@ struct HomePage: Page {
 
             // Feature cards with scroll animation
             Section {
-                Heading(.two) { "Features" }
+                Heading(.two) { Localized("home.features.title") }
                     .font(.sans, size: 24, weight: .semibold, color: .text, align: .center)
                     .animateOnScroll(.fadeIn)
 
                 Stack {
-                    FeatureItem(title: "Pages", description: "Declarative pages with result builders")
-                    FeatureItem(title: "Components", description: "Reactive components with @State and @Action")
-                    FeatureItem(title: "Routes", description: "Type-safe routing with path parameters")
+                    FeatureItem(title: t("home.features.pages"), description: t("home.features.pages.desc"))
+                    FeatureItem(title: t("home.features.components"), description: t("home.features.components.desc"))
+                    FeatureItem(title: t("home.features.routes"), description: t("home.features.routes.desc"))
                 }
                 .grid(columns: 3, gap: 16)
                 .animateOnScroll(.slideUp, duration: 0.5)

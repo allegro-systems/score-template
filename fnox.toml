@@ -1,0 +1,16 @@
+# fnox — secret management for developers.
+# Docs: https://fnox.jdx.dev/
+#
+# Quick start:
+#   1. fnox keygen             — generate an age keypair (one-time)
+#   2. fnox set APP_SECRET … — encrypt and store a secret
+#   3. eval "$(fnox activate)" — load secrets into your shell
+#
+# Secrets are age-encrypted and safe to commit.
+
+[providers]
+age = { type = "age" }
+
+[secrets]
+APP_NAME = { default = "Score App" }
+# APP_SECRET = { provider = "age", value = "<run: fnox set APP_SECRET \"your-value\">" }
