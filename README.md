@@ -12,18 +12,36 @@ A minimal Score application demonstrating core features:
 
 ```bash
 mise install       # Install pinned tool versions (Swift, hk, fnox)
-swift run          # Start the dev server
+mise run dev       # Start the dev server with hot reload
 ```
 
 Then open http://localhost:8080 in your browser.
 
-## Build
+## Tasks
+
+All tasks are run through mise:
 
 ```bash
-mise run build     # Or: swift run ScoreMinimal --build
+mise run dev                # Dev server with hot reload (default port 8080)
+mise run dev -p 3000        # Dev server on a custom port
+mise run build              # Generate static HTML, CSS, JS for production
+mise run build -v           # Verbose production build
+mise run format             # Format source code
+mise run format --check     # Lint without modifying files
+mise run clean              # Remove build artifacts
 ```
 
-Generates static HTML, CSS, and JS in the output directory.
+## Using Xcode
+
+Open the project in Xcode:
+
+```bash
+open Package.swift
+```
+
+The repository includes shared Xcode schemes for each mise task: **Dev Server**, **Build**, **Format**, and **Clean**. Select a scheme from the scheme picker in the toolbar, then press **⌘R** to run it. Output appears in the Xcode console, and **⌘.** stops the running task.
+
+> **Note:** The schemes invoke mise through a login shell (`/bin/zsh -lic`), so mise must be installed and available in your shell profile. Run `mise install` from the terminal first.
 
 ## Recommended Tooling
 
@@ -52,7 +70,7 @@ The template includes a starter `fnox.toml` with an `APP_NAME` default that is r
 #### fnox Quick Start
 
 ```bash
-fnox keygen                          # Generate an age keypair (one-time)
+age-keygen -o ~/.config/fnox/key.txt # Generate an age keypair (one-time)
 fnox set APP_SECRET "my-secret"      # Encrypt and store a secret
 eval "$(fnox activate)"              # Load secrets into your shell
 ```

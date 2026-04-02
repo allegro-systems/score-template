@@ -2,15 +2,17 @@
 # Docs: https://fnox.jdx.dev/
 #
 # Quick start:
-#   1. fnox keygen             — generate an age keypair (one-time)
-#   2. fnox set APP_SECRET … — encrypt and store a secret
-#   3. eval "$(fnox activate)" — load secrets into your shell
+#   1. age-keygen -o ~/.config/fnox/key.txt  — generate an age keypair (one-time)
+#   2. Add your public key to [providers.age].recipients below
+#   3. fnox set APP_SECRET "your-value"      — encrypt and store a secret
+#   4. eval "$(fnox activate)"               — load secrets into your shell
 #
 # Secrets are age-encrypted and safe to commit.
 
-[providers]
-age = { type = "age" }
+[providers.age]
+type = "age"
+recipients = ["age1jfclms5n4vgssgsv2ljff36zj3xt7zyc0dt0ryttq3x2lhnqyqcq9v5rwt"]
 
 [secrets]
 APP_NAME = { default = "Score App" }
-# APP_SECRET = { provider = "age", value = "<run: fnox set APP_SECRET \"your-value\">" }
+# APP_SECRET = { provider = "age" }

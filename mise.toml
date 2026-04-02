@@ -2,14 +2,14 @@
 swift = "6.3"
 hk = { version = "latest", postinstall = "hk install" }
 fnox = "latest"
+age = "latest"
 
 [plugins]
 fnox-env = "https://github.com/jdx/mise-env-fnox"
 
-# Dev Server
-
 [env]
 _.fnox-env = { tools = true }
+
 [tasks.dev]
 description = "Start the development server with hot reload"
 raw = true
@@ -23,6 +23,7 @@ swift run score dev --port "$usage_port"
 # Build
 [tasks.build]
 description = "Build the site for production"
+raw = true
 usage = '''
 flag "-v --verbose" help="Show verbose build output" default="false"
 '''

@@ -1,114 +1,114 @@
 {
   "sourceLanguage": "en",
   "strings": {
-    "counter.label": {
+    "api.add": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Count: "
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Hinzufügen" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Add" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Agregar" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Ajouter" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Добавить" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "添加" } }
       }
     },
-    "home.counter.title": {
+    "api.cancel": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive Counter"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Abbrechen" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Cancel" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Cancelar" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Annuler" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Отмена" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "取消" } }
       }
     },
-    "home.features.components": {
+    "api.description.after": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Components"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": " über das Controller-Protokoll. Hinzufügen, bearbeiten und löschen für Live-CRUD." } },
+        "en": { "stringUnit": { "state": "translated", "value": " using the Controller protocol. Add, edit, and delete to see live CRUD." } },
+        "es": { "stringUnit": { "state": "translated", "value": " usando el protocolo Controller. Agrega, edita y elimina para ver CRUD en vivo." } },
+        "fr": { "stringUnit": { "state": "translated", "value": " via le protocole Controller. Ajoutez, modifiez et supprimez pour voir le CRUD en direct." } },
+        "ru": { "stringUnit": { "state": "translated", "value": " через протокол Controller. Добавляйте, редактируйте и удаляйте для демонстрации CRUD." } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "，使用 Controller 协议。添加、编辑和删除以查看实时 CRUD。" } }
       }
     },
-    "home.features.components.desc": {
+    "api.description.before": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive components with @State and @Action"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Elemente abgerufen von " } },
+        "en": { "stringUnit": { "state": "translated", "value": "Items fetched from " } },
+        "es": { "stringUnit": { "state": "translated", "value": "Elementos obtenidos de " } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Éléments récupérés depuis " } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Элементы получены из " } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "数据来自 " } }
       }
     },
-    "home.features.pages": {
+    "api.edit.title": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pages"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Element bearbeiten" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Edit Item" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Editar elemento" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Modifier l'élément" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Редактировать элемент" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "编辑项目" } }
       }
     },
-    "home.features.pages.desc": {
+    "api.placeholder.description": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Declarative pages with result builders"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Beschreibung" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Description" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Descripción" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Description" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Описание" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "描述" } }
       }
     },
-    "home.features.routes": {
+    "api.placeholder.title": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Routes"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Titel" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Title" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Título" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Titre" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Заголовок" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "标题" } }
       }
     },
-    "home.features.routes.desc": {
+    "api.save": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Type-safe routing with path parameters"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Speichern" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Save" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Guardar" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Enregistrer" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Сохранить" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "保存" } }
       }
     },
-    "home.features.title": {
+    "api.title": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Features"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "REST-API" } },
+        "en": { "stringUnit": { "state": "translated", "value": "REST API" } },
+        "es": { "stringUnit": { "state": "translated", "value": "API REST" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "API REST" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "REST API" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "REST API" } }
       }
     },
     "home.subtitle": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A minimal app demonstrating pages, components, routes, and data."
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Eine minimale App, die Seiten, Komponenten, Routen und Daten demonstriert." } },
+        "en": { "stringUnit": { "state": "translated", "value": "A minimal app demonstrating pages, components, routes, and data." } },
+        "es": { "stringUnit": { "state": "translated", "value": "Una aplicación mínima que demuestra páginas, componentes, rutas y datos." } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Une application minimale démontrant les pages, composants, routes et données." } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Минимальное приложение, демонстрирующее страницы, компоненты, маршруты и данные." } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "一个展示页面、组件、路由和数据的最简应用。" } }
       }
     },
     "home.title": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Score Minimal Example"
-          }
-        }
+        "de": { "stringUnit": { "state": "translated", "value": "Score Minimalbeispiel" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Score Minimal Example" } },
+        "es": { "stringUnit": { "state": "translated", "value": "Ejemplo Mínimo de Score" } },
+        "fr": { "stringUnit": { "state": "translated", "value": "Exemple Minimal Score" } },
+        "ru": { "stringUnit": { "state": "translated", "value": "Минимальный пример Score" } },
+        "zh-Hans": { "stringUnit": { "state": "translated", "value": "Score 最简示例" } }
       }
     }
   },

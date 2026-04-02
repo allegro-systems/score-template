@@ -1,6 +1,6 @@
 # Score App
 
-A web application built with the [Score](https://github.com/allegro-systems/score) framework — a server-rendered Swift web framework with reactive signals for client-side interactivity.
+A web application built with the [Score](https://github.com/allegro-systems/score) framework — a hybrid-rendered Swift web framework with reactive signals for client-side interactivity.
 
 ## Score Conventions
 
@@ -16,7 +16,7 @@ Every modifier follows a **one modifier per CSS concept** rule:
 .font(.sans, size: 14)        // all typography in one modifier
 .border(width: 1, color: .border, style: .solid)
 .size(width: 200, height: 100)
-.radius(8)
+.border(radius: 8)
 ```
 
 - **One modifier per concept** — never create `.flexItem()`, `.fontSize()`, etc.
@@ -41,12 +41,12 @@ struct Counter {
 
     var body: some Node {
         Button { "+" }.on(.click, action: "increment")
-        Text { $count }
+        Text { $count }.font(size: 16)
     }
 }
 ```
 
-`RawTextNode("<script>...")` is only acceptable when marked with `// SCORE-GAP:` for features the framework doesn't support yet (client-side fetch, timers, polling).
+`RawTextNode("<script>...")` is only acceptable when marked with `// SCORE-GAP:` for features the framework doesn't support yet.
 
 ### Components
 
@@ -62,25 +62,11 @@ Every Score app should have:
 1. A `Localizable.xcstrings` file at the project root (JSON format, `sourceLanguage: "en"`)
 2. A `localization` property in `App.swift` that loads it:
 
-```swift
-// swiftlint:disable:next force_try
-private static let _localization: Localization? = try! Localization(
-    catalog: StringCatalog.load(from: "Localizable.xcstrings")
-)
-
-var localization: Localization? { Self._localization }
-```
-
 ### Using Translations
 
-Two patterns for accessing translated strings:
+Pattern for accessing translated strings:
 
 ```swift
-// Pattern 1: Localized() — returns a Node, use inside content blocks
-Heading(.one) { Localized("home.title") }
-Paragraph { Localized("home.subtitle") }
-
-// Pattern 2: t() — returns a String, use for component props
 FeatureItem(title: t("features.pages"), description: t("features.pages.desc"))
 SiteButton(title: t("nav.get_started"), link: "/docs")
 ```
@@ -118,7 +104,7 @@ If using `allegro-theme`, drop in `LanguageDropdown()` — it reads supported lo
 ### Adding a New String
 
 1. Add the key to `Localizable.xcstrings` with translations for all supported locales
-2. Use `Localized("key")` or `t("key")` in your component
+2. Use `t("key")` in your component
 
 ### xcstrings Format
 
@@ -147,23 +133,12 @@ If using `allegro-theme`, drop in `LanguageDropdown()` — it reads supported lo
 }
 ```
 
-## Project Structure
-
-```
-Sources/
-  App.swift              # @main Application entry point
-  HomePage.swift         # Pages (struct conforming to Page)
-  Counter.swift          # Components (@Component struct)
-  APIController.swift    # API routes (struct conforming to Controller)
-Localizable.xcstrings    # Translation string catalog
-```
-
 ## Development
 
 ```bash
-swift run score dev    # Dev server with hot reload
-swift run score build  # Production build
-swift build            # Compile only
+mise run dev    # Dev server with hot reload
+mise run build  # Production build
+swift build     # Compile only
 ```
 
 ## Tooling
